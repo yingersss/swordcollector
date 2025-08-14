@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba8bxhpcsqbji"]
+
+[ext_resource type="PackedScene" uid="uid://c07l6mdy2uh24" path="res://inventory/scenes/Inventory.tscn" id="1_37kl0"]
+
+[node name="test" type="Node2D"]
+
+[node name="Inventory_UI" parent="." instance=ExtResource("1_37kl0")]
+offset_left = 13.0
+offset_top = 16.0
+offset_right = 13.0
+offset_bottom = 16.0

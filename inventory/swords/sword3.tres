@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="InventorySwordItem" load_steps=4 format=3 uid="uid://c0td6cl7l2ejw"]
+
+[ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/inventory_item.gd" id="1_pbflu"]
+[ext_resource type="Texture2D" uid="uid://be3ugoaoe2ytj" path="res://assets/swords/swords.png" id="2_63hvx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc31p"]
+atlas = ExtResource("2_63hvx")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_pbflu")
+name = "sword2"
+texture = SubResource("AtlasTexture_yc31p")
+metadata/_custom_type_script = "uid://b0mct8kamvaw2"
