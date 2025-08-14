@@ -8,8 +8,8 @@
 layout_mode = 3
 anchor_right = 0.056
 anchor_bottom = 0.096
-offset_right = -2.512
-offset_bottom = -0.208
+offset_right = 52.488
+offset_bottom = 52.792
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3n7vm")
@@ -17,8 +17,8 @@ script = ExtResource("1_3n7vm")
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_right = 62.0
-offset_bottom = 62.0
+offset_right = 112.0
+offset_bottom = 111.0
 texture = ExtResource("2_ki15f")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -32,18 +32,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = -28.0
-offset_right = 28.0
-offset_bottom = 28.0
+offset_left = -52.0
+offset_top = -52.0
+offset_right = 52.0
+offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
 columns = 3
 
 [node name="inventory_ui_slot" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ntduf")]
-layout_mode = 2
-
-[node name="inventory_ui_slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ntduf")]
 layout_mode = 2
 
 [node name="inventory_ui_slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ntduf")]
@@ -65,4 +64,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="inventory_ui_slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ntduf")]
+layout_mode = 2
+
+[node name="inventory_ui_slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ntduf")]
 layout_mode = 2
