@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SwordCollector"
-run/main_scene="uid://ba8bxhpcsqbji"
+run/main_scene="uid://cm08756ufug8d"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

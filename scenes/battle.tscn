@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://cm08756ufug8d"]
+
+[ext_resource type="Script" uid="uid://xtxkmgn1qyyf" path="res://scenes/battle.gd" id="1_a12nh"]
+[ext_resource type="Texture2D" uid="uid://8t8xd1ura6yc" path="res://assets/BG/battleback1.png" id="1_dn72j"]
+[ext_resource type="Resource" uid="uid://emcqs7cpj6et" path="res://enemy/minotaur_swordsman.tres" id="2_6vh42"]
+[ext_resource type="Texture2D" uid="uid://ttdv5031avhq" path="res://assets/Assembling Automatons Automaton C.png" id="2_th188"]
+[ext_resource type="Resource" uid="uid://1arb84itpnnn" path="res://player.tres" id="3_4k1nj"]
+[ext_resource type="PackedScene" uid="uid://c07l6mdy2uh24" path="res://inventory/scenes/Inventory.tscn" id="3_p1qf1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1qf1"]
+bg_color = Color(0.964713, 0, 0.161733, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a12nh"]
+bg_color = Color(0, 0.894118, 0.27451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpir7"]
+bg_color = Color(0, 0, 0, 0.45098)
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a12nh")
+enemy = ExtResource("2_6vh42")
+player = ExtResource("3_4k1nj")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+texture = ExtResource("1_dn72j")
+
+[node name="EnemyContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 148.0
+offset_right = 721.0
+offset_bottom = 499.0
+
+[node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_p1qf1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a12nh")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP: 25/50"
+horizontal_alignment = 1
+
+[node name="Enemy" type="TextureRect" parent="EnemyContainer"]
+layout_mode = 2
+texture = ExtResource("2_th188")
+stretch_mode = 3
+
+[node name="PlayerPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lpir7")
+
+[node name="PlayerData" type="HBoxContainer" parent="PlayerPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.5
+anchor_right = 0.99
+anchor_bottom = 0.5
+offset_top = -27.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Player" type="Label" parent="PlayerPanel/PlayerData"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 40
+text = "Player"
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerPanel/PlayerData"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_p1qf1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a12nh")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="PlayerPanel/PlayerData/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "HP: 25/50"
+horizontal_alignment = 1
+
+[node name="Inventory_UI" parent="." instance=ExtResource("3_p1qf1")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -147.0
+offset_right = 144.0
+offset_bottom = -36.0
+grow_horizontal = 1
+scale = Vector2(2.55, 2.55)

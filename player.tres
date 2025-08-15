@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=3 format=3 uid="uid://1arb84itpnnn"]
+
+[ext_resource type="Script" uid="uid://bcs0c8nc1xubv" path="res://playerdata.gd" id="1_uqo4n"]
+[ext_resource type="Resource" uid="uid://dtwm1fyuxfhxk" path="res://inventory/player_inv.tres" id="2_3iybd"]
+
+[resource]
+script = ExtResource("1_uqo4n")
+name = "Hero"
+max_health = 50
+current_health = 44
+gold = 0
+swords = ExtResource("2_3iybd")
+metadata/_custom_type_script = "uid://bcs0c8nc1xubv"

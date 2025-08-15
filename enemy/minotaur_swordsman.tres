@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=4 format=3 uid="uid://emcqs7cpj6et"]
+
+[ext_resource type="Resource" uid="uid://hfk5yb4wvfes" path="res://enemy/minotaur_swordsman_inventory.tres" id="1_28u5d"]
+[ext_resource type="Script" uid="uid://bknmqgb785ga8" path="res://scripts/BaseEnemy.gd" id="1_hf4xh"]
+[ext_resource type="Texture2D" uid="uid://b4f4bghhroin6" path="res://assets/Hexany's Monster Menagerie/Tiles/Transparent/creature_064.png" id="2_28u5d"]
+
+[resource]
+script = ExtResource("1_hf4xh")
+display_name = "Minotaur Swordsman"
+texture = ExtResource("2_28u5d")
+max_health = 100
+current_health = 75
+inventory = ExtResource("1_28u5d")
+metadata/_custom_type_script = "uid://bknmqgb785ga8"

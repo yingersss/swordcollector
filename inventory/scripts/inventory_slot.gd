@@ -1,5 +1,7 @@
 extends Panel
 
+class_name InventorySlot
+
 @onready var icon: TextureRect = $CenterContainer/Panel/item_display
 var item: ItemResource = null
 

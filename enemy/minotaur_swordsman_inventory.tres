@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=4 format=3 uid="uid://hfk5yb4wvfes"]
+
+[ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/item_resource.gd" id="1_w41yi"]
+[ext_resource type="Resource" uid="uid://bx4juxkt6bk40" path="res://inventory/swords/leaf_blade.tres" id="2_qolmk"]
+[ext_resource type="Script" uid="uid://crraf47xw0j01" path="res://inventory/scripts/inventory.gd" id="3_hh6x7"]
+
+[resource]
+script = ExtResource("3_hh6x7")
+items = Array[ExtResource("1_w41yi")]([ExtResource("2_qolmk"), null, null, null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://crraf47xw0j01"
