@@ -32,13 +32,11 @@ func update_ui() -> void:
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if item == null:
 		return null
-
 	var data := {
 		"type": "slot_sword",
 		"from": self,
 		"item": item
 	}
-
 	# visible preview as just the icon
 	var preview := TextureRect.new()
 	preview.texture = icon.texture
