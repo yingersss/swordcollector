@@ -25,7 +25,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a12nh")
-enemy = ExtResource("2_6vh42")
 player = ExtResource("3_4k1nj")
 
 [node name="Background" type="TextureRect" parent="."]
