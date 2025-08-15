@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://ccjj6me03q22m"]
+
+[ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/item_resource.gd" id="1_m88ns"]
+[ext_resource type="Texture2D" uid="uid://be3ugoaoe2ytj" path="res://assets/swords/swords.png" id="2_5usib"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kilki"]
+atlas = ExtResource("2_5usib")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_m88ns")
+id = "molten_blade"
+display_name = "Molten Blade"
+texture = SubResource("AtlasTexture_kilki")
+attack = 5
+durability = 20
+metadata/_custom_type_script = "uid://b0mct8kamvaw2"

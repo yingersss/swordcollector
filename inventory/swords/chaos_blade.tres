@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://cfwm8vgqmrsky"]
+
+[ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/item_resource.gd" id="2_ilbql"]
+[ext_resource type="Texture2D" uid="uid://be3ugoaoe2ytj" path="res://assets/swords/swords.png" id="2_s6dcf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7chp"]
+atlas = ExtResource("2_s6dcf")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_ilbql")
+id = "chaos_blade"
+display_name = "Blade of Chaos"
+texture = SubResource("AtlasTexture_d7chp")
+attack = 5
+durability = 20
+metadata/_custom_type_script = "uid://b0mct8kamvaw2"

@@ -1,7 +1,7 @@
 extends Panel
 
 @onready var icon: TextureRect = $CenterContainer/Panel/item_display
-var item: InventorySwordItem = null
+var item: ItemResource = null
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
@@ -10,11 +10,11 @@ func _ready() -> void:
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	update_ui()
 
-func set_item(i: InventorySwordItem) -> void:
+func set_item(i: ItemResource) -> void:
 	item = i
 	update_ui()
 
-func update(item_in: InventorySwordItem) -> void:
+func update(item_in: ItemResource) -> void:
 	set_item(item_in)
 
 func update_ui() -> void:
@@ -25,7 +25,7 @@ func update_ui() -> void:
 	else:
 		icon.texture = item.texture
 		icon.show()
-		tooltip_text = item.name
+		tooltip_text = _format_tt()
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if item == null:
@@ -52,9 +52,15 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var from_slot: Panel = data["from"]
-	var incoming: InventorySwordItem = data["item"]
+	var incoming: ItemResource = data["item"]
 
 	# swap items
 	var tmp := item
 	set_item(incoming)
 	from_slot.set_item(tmp)
+
+func _format_tt() -> String:
+	# If you also have ItemInstance in the future, adjust here
+	var atk := str(item.attack)
+	var dur := str(item.durability)
+	return "%s\nAttack: %s\nDurability: %s" % [item.display_name, atk, dur]

@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Inventory" load_steps=8 format=3 uid="uid://dtwm1fyuxfhxk"]
 
-[ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/inventory_item.gd" id="1_gjtu6"]
-[ext_resource type="Resource" uid="uid://cfwm8vgqmrsky" path="res://inventory/swords/sword1.tres" id="2_knutq"]
+[ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/item_resource.gd" id="1_m2v4j"]
+[ext_resource type="Resource" uid="uid://cfwm8vgqmrsky" path="res://inventory/swords/chaos_blade.tres" id="2_m2v4j"]
 [ext_resource type="Script" uid="uid://crraf47xw0j01" path="res://inventory/scripts/inventory.gd" id="3_7fuvg"]
-[ext_resource type="Resource" uid="uid://coxsbemnnxhml" path="res://inventory/swords/sword2.tres" id="3_m2v4j"]
-[ext_resource type="Resource" uid="uid://c0td6cl7l2ejw" path="res://inventory/swords/sword3.tres" id="4_t62xh"]
-[ext_resource type="Resource" uid="uid://dyaskdelux7to" path="res://inventory/swords/sword4.tres" id="5_d4ldm"]
-[ext_resource type="Resource" uid="uid://bvbfa4jsn21g2" path="res://inventory/swords/sword5.tres" id="6_ccsdn"]
+[ext_resource type="Resource" uid="uid://brsq44bd8cgbc" path="res://inventory/swords/shining_blade.tres" id="3_m2v4j"]
+[ext_resource type="Resource" uid="uid://bx4juxkt6bk40" path="res://inventory/swords/leaf_blade.tres" id="4_t62xh"]
+[ext_resource type="Resource" uid="uid://dtrswpxyyywpk" path="res://inventory/swords/sacred_blade.tres" id="5_d4ldm"]
+[ext_resource type="Resource" uid="uid://ccjj6me03q22m" path="res://inventory/swords/molten_blade.tres" id="6_ccsdn"]
 
 [resource]
 script = ExtResource("3_7fuvg")
-items = Array[ExtResource("1_gjtu6")]([ExtResource("2_knutq"), ExtResource("3_m2v4j"), ExtResource("4_t62xh"), ExtResource("5_d4ldm"), ExtResource("6_ccsdn"), null, null, null, null])
+items = Array[ExtResource("1_m2v4j")]([ExtResource("2_m2v4j"), ExtResource("3_m2v4j"), ExtResource("4_t62xh"), ExtResource("5_d4ldm"), ExtResource("6_ccsdn"), null, null, null, null])
 metadata/_custom_type_script = "uid://crraf47xw0j01"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://bx4juxkt6bk40"]
+
+[ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/item_resource.gd" id="1_mfxw3"]
+[ext_resource type="Texture2D" uid="uid://be3ugoaoe2ytj" path="res://assets/swords/swords.png" id="2_fi0t5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kilki"]
+atlas = ExtResource("2_fi0t5")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_mfxw3")
+id = "leaf_blade"
+display_name = "Leaf Blade"
+texture = SubResource("AtlasTexture_kilki")
+attack = 22
+durability = 20
+metadata/_custom_type_script = "uid://b0mct8kamvaw2"
