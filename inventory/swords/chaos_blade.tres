@@ -10,7 +10,7 @@ region = Rect2(0, 0, 32, 32)
 [resource]
 script = ExtResource("2_ilbql")
 id = "chaos_blade"
-display_name = ""
+display_name = "Chaos Blade"
 texture = SubResource("AtlasTexture_d7chp")
 attack = 3
 max_durability = 5
