@@ -13,7 +13,18 @@ func _ready() -> void:
 	update_ui()
 
 func set_item(i: ItemResource) -> void:
+	if item:
+		if item.broken.is_connected(_on_item_broken):
+			item.broken.disconnect(_on_item_broken)
+		if item.durability_changed.is_connected(_on_durability_changed):
+			item.durability_changed.disconnect(_on_durability_changed)
 	item = i
+	
+	if item:
+		if not item.broken.is_connected(_on_item_broken):
+			item.broken.connect(_on_item_broken)
+		if not item.durability_changed.is_connected(_on_durability_changed):
+			item.durability_changed.connect(_on_durability_changed)
 	update_ui()
 
 func update(item_in: ItemResource) -> void:
@@ -44,7 +55,6 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	preview.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	preview.set_custom_minimum_size(icon.size)
 	set_drag_preview(preview)
-
 	return data
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
@@ -58,9 +68,14 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var tmp := item
 	set_item(incoming)
 	from_slot.set_item(tmp)
-
+	
 func _format_tt() -> String:
-	# If you also have ItemInstance in the future, adjust here
-	var atk := str(item.attack)
-	var dur := str(item.durability)
-	return "%s\nAttack: %s\nDurability: %s" % [item.display_name, atk, dur]
+	return "%s\nAttack: %d\nDurability: %d/%d" % [
+		item.display_name, item.attack, item.durability, item.max_durability
+	]
+
+func _on_item_broken() -> void:
+	set_item(null)  # removes from inventory
+
+func _on_durability_changed(_v:int) -> void:
+	update_ui()

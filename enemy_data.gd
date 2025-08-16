@@ -29,7 +29,9 @@ func _drop_data(_pos: Vector2, data: Variant) -> void:
 	var sword: ItemResource = data["item"]
 	if sword and enemy:
 		enemy.current_health -= sword.attack
+		sword.use_once()
 		print("%s took %d damage! HP now %d" % [enemy.name, sword.attack, enemy.current_health])
+		print("%s's durability took damage and is now %d" % [sword.display_name, sword.durability])
 
 func _on_hp_changed(new_hp:int) -> void:
 	hp_bar.value = new_hp

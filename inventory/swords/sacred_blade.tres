@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://dtrswpxyyywpk"]
 
 [ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/item_resource.gd" id="1_m4sry"]
-[ext_resource type="Texture2D" uid="uid://be3ugoaoe2ytj" path="res://assets/swords/swords.png" id="2_18thk"]
+[ext_resource type="Texture2D" uid="uid://dvy8uitw358v" path="res://assets/swords/swords.png" id="2_18thk"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kilki"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4sry"]
 atlas = ExtResource("2_18thk")
 region = Rect2(96, 0, 32, 32)
 
@@ -11,7 +11,7 @@ region = Rect2(96, 0, 32, 32)
 script = ExtResource("1_m4sry")
 id = "sacred_blade"
 display_name = "Sacred Blade"
-texture = SubResource("AtlasTexture_kilki")
-attack = 5
-durability = 20
+texture = SubResource("AtlasTexture_m4sry")
+attack = 6
+max_durability = 4
 metadata/_custom_type_script = "uid://b0mct8kamvaw2"

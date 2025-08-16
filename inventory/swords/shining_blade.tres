@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://brsq44bd8cgbc"]
 
 [ext_resource type="Script" uid="uid://b0mct8kamvaw2" path="res://inventory/scripts/item_resource.gd" id="1_h05tl"]
-[ext_resource type="Texture2D" uid="uid://be3ugoaoe2ytj" path="res://assets/swords/swords.png" id="2_gtji0"]
+[ext_resource type="Texture2D" uid="uid://dvy8uitw358v" path="res://assets/swords/swords.png" id="2_gtji0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kilki"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h05tl"]
 atlas = ExtResource("2_gtji0")
 region = Rect2(32, 0, 32, 32)
 
@@ -11,7 +11,7 @@ region = Rect2(32, 0, 32, 32)
 script = ExtResource("1_h05tl")
 id = "shining_blade"
 display_name = "Shining Blade"
-texture = SubResource("AtlasTexture_kilki")
+texture = SubResource("AtlasTexture_h05tl")
 attack = 5
-durability = 20
+max_durability = 20
 metadata/_custom_type_script = "uid://b0mct8kamvaw2"
