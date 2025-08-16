@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://b5evq1hc0hwo5"]
+
+[ext_resource type="Script" uid="uid://bknmqgb785ga8" path="res://scripts/enemy.gd" id="1_pg3oe"]
+[ext_resource type="Texture2D" uid="uid://ttdv5031avhq" path="res://assets/Assembling Automatons Automaton C.png" id="2_ns6nd"]
+
+[resource]
+script = ExtResource("1_pg3oe")
+name = "Automaton Warrior"
+texture = ExtResource("2_ns6nd")
+max_health = 100
+metadata/_custom_type_script = "uid://bknmqgb785ga8"

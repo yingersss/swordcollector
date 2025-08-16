@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cm08756ufug8d"]
+[gd_scene load_steps=11 format=3 uid="uid://cm08756ufug8d"]
 
 [ext_resource type="Script" uid="uid://xtxkmgn1qyyf" path="res://scenes/battle.gd" id="1_a12nh"]
 [ext_resource type="Texture2D" uid="uid://8t8xd1ura6yc" path="res://assets/BG/battleback1.png" id="1_dn72j"]
+[ext_resource type="Resource" uid="uid://emcqs7cpj6et" path="res://enemy/minotaur_swordsman.tres" id="2_6vh42"]
+[ext_resource type="Texture2D" uid="uid://ttdv5031avhq" path="res://assets/Assembling Automatons Automaton C.png" id="2_th188"]
 [ext_resource type="Resource" uid="uid://1arb84itpnnn" path="res://player.tres" id="3_4k1nj"]
 [ext_resource type="PackedScene" uid="uid://c07l6mdy2uh24" path="res://inventory/scenes/Inventory.tscn" id="3_p1qf1"]
 [ext_resource type="Script" uid="uid://dqud6rfl6p4m6" path="res://enemy_data.gd" id="6_4k1nj"]
-[ext_resource type="Resource" uid="uid://b5evq1hc0hwo5" path="res://automaton_warrior.tres" id="6_f4pi3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1qf1"]
 bg_color = Color(0.964713, 0, 0.161733, 1)
@@ -60,9 +61,10 @@ horizontal_alignment = 1
 
 [node name="Enemy" type="TextureRect" parent="EnemyContainer"]
 layout_mode = 2
+texture = ExtResource("2_th188")
 stretch_mode = 3
 script = ExtResource("6_4k1nj")
-enemy = ExtResource("6_f4pi3")
+enemy = ExtResource("2_6vh42")
 
 [node name="PlayerPanel" type="Panel" parent="."]
 layout_mode = 1
